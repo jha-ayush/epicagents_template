@@ -111,7 +111,7 @@ python app.py
 ---
 
 ## 🧠 Powered by EpicAgents  
-Built by [SudoKodes](https://epicagents.ai)  
+Built by [EpicAgents](https://epicagents.ai), subsidiary of SudoKodes LLC  
 Contact: [admin@sudokode.co](mailto:admin@sudokode.co)
 
 ---
