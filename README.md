@@ -1,122 +1,108 @@
 # 🤖 EpicAgents Framework
 
-**Train and deploy custom AI agents using your business docs**  
-EpicAgents is a modular framework for building AI-powered agents that answer questions based on structured documents like FAQs, menus, policies, SOPs, and more — no code required.
+**Create, Customize & Deploy AI Chat Agents for Any Business Use Case**
+
+EpicAgents is a modular, production-ready framework that powers branded AI assistants like **Navo** — tailored to answer business-specific customer or internal queries using structured data, with zero coding required for customization.
 
 ---
 
-## 🔗 Live Agent Examples
+## 🔧 Features
 
-| Agent Type        | Demo URL                                      |
-|-------------------|-----------------------------------------------|
-| 🍽️ Navo (Customer) | [epicagents.ai](https://epicagents.ai)        |
-| 🛡️ Zyra (Internal)  | [epicagents.ai](https://epicagents.ai)        |
-
----
-
-## 🧠 What You Can Build
-
-| Use Case              | Example Agent |
-|------------------------|----------------|
-| 🧾 Menu or Product Guide | Navo (Food Delights) |
-| 📘 Employee Handbook     | Zyra (Internal Docs) |
-| 📦 SOPs & Processes      | Zyra |
-| 🎓 Onboarding Agent      | Zyra |
-| 📣 FAQ & Policy Chatbot  | Navo / Zyra |
+| Feature                      | Description |
+|-----------------------------|-------------|
+| 🧱 Modular Frontend & Backend | Built with Flask, TailwindCSS, and JS for reuse across agents |
+| 🧠 GPT-4 Powered             | High-quality conversational support via OpenAI API |
+| 📁 Structured JSON Support   | Feed business data (e.g., FAQs, Policies, Menus, SOPs) |
+| 🗂️ Multi-Agent Ready         | Easily spin up different agents (e.g., customer vs. internal) |
+| 📊 Redis Event Logging       | Tracks queries, resets, exports for insights |
+| 📤 Export to PDF             | Customers can download chat history |
+| 🎨 Fully Branded             | Custom logos, names, tones, colors for every agent |
+| 📱 Mobile Optimized          | Responsive UI, sleek dark theme |
+| 🔁 Prompt System             | Configurable tone, formatting, and context injection |
+| 🌐 CORS & Deployment Ready   | Flask backend deploys easily on Render or similar platforms |
 
 ---
 
-## ✨ Features
-
-| Feature                     | Description |
-|----------------------------|-------------|
-| ⚙️ Modular Agent Design      | Use the same framework for different agents |
-| 🧠 GPT-4 Integration         | Context-aware AI from OpenAI |
-| 💡 Sticky Welcome Message   | Brand-first, user-friendly onboarding |
-| 🎨 Tailwind UI Widget       | Responsive, mobile-optimized, modern |
-| 📄 Markdown Reply Support   | Bold, italics, lists, and clean layout |
-| 📤 PDF Export               | Save chat transcripts |
-| 🔁 Redis Logging (Optional) | Analytics-ready event logs |
-| 🔐 Secure `.env` Setup      | API keys & config separation |
-
----
-
-## 🧩 Folder Structure Template
+## 📁 Directory Structure
 
 ```
-📁 epicagents_agentname/
+epicagents/
+│
 ├── assets/
-│   ├── agent_avatar.png
-│   └── epic_agents_logo.png
+│   ├── epic_agents_logo.png
+│   ├── navo_logo_01.jpg
+│   └── navo_logo_01_transparent.jpg
+│
 ├── data/
-│   ├── menu.json
-│   ├── faqs.json
-│   └── ...
+│   ├── customer_docs/
+│   │   ├── menu.json
+│   │   ├── faqs.json
+│   │   └── ...
+│   └── internal_docs/
+│       ├── employee_handbook.json
+│       ├── sop.json
+│       └── ...
+│
+├── templates/
+│   ├── index_customer.html
+│   └── index_internal.html
+│
+├── .env
+├── .gitignore
 ├── app.py
-├── index.html
-├── requirements.txt
-└── .env
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
-## 🚀 Setup Guide
+## 🚀 Running Locally
 
-### 1. Clone the Agent Repo
-
+1. **Clone the Repo**
 ```bash
-git clone https://github.com/your-org/epicagents_agentname.git
-cd epicagents_agentname
+git clone https://github.com/your-org/epicagents.git
+cd epicagents
 ```
 
-### 2. Install Dependencies
-
+2. **Install Python Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Create `.env` File
-
-```env
+3. **Set up Environment Variables**
+Create a `.env` file in the root:
+```
 OPENAI_API_KEY=your-key-here
 USE_REDIS=True
 REDIS_URL=redis://your-redis-url
-FLASK_ENV=production
 ```
 
-### 4. Run the Flask App
-
+4. **Run the App**
 ```bash
 python app.py
 ```
 
 ---
 
-## 🛠️ Creating New Agents
+## 🔀 Agent Switching Logic
 
-1. **Fork or clone this repo as a base**
-2. **Customize `agentConfig` in the frontend**
-3. **Replace avatar and data files**
-4. **Update the README with specific agent info**
-5. **Deploy to Render or your preferred platform**
+- `GET /ask-customer/` → Loads customer-facing structured data from `customer_docs`
+- `GET /ask-internal/` → Loads internal-use structured data from `internal_docs`
 
----
-
-## 🌐 Hosting & Deployment
-
-- 🟩 **Backend**: Flask app (Render, Railway, etc.)
-- 🟨 **Frontend**: HTML+Tailwind widget embedded in any site
-- 🟥 **Logging (optional)**: Redis-compatible, secure and private
+Use corresponding frontends:  
+- `index_customer.html` for public user interactions  
+- `index_internal.html` for internal teams or admin users
 
 ---
 
-## 🧠 Powered by EpicAgents  
-Built by [EpicAgents](https://epicagents.ai), subsidiary of SudoKodes LLC  
-Contact: [admin@sudokode.co](mailto:admin@sudokode.co)
+## ✨ Live Demo
+
+Visit: [https://epicagents.ai](https://epicagents.ai)  
+Try both Showcase 1 (Customer Docs) and Showcase 2 (Internal Docs)
 
 ---
 
-## 📣 Want Custom Agents?
-
-Need help building agents for your business or team?  
-**Contact us today → [admin@sudokode.co](mailto:admin@sudokode.co)**
+## 🧠 Powered by GPT-4  
+Created with ❤️ by [SudoKodes LLC](https://epicagents.ai)  
+For custom deployments: [admin@sudokode.co](mailto:admin@sudokode.co)
