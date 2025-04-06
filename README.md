@@ -1,4 +1,4 @@
-# 🤖 EpicAgents Framework
+# EpicAgents Framework
 
 <p align="center">
   <img src="https://i.imghippo.com/files/GH4101tzU.png" alt="EpicAgents Logo" width="120"/>
