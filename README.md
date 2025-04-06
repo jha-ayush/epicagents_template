@@ -72,7 +72,6 @@ epicagents/
 ├── templates/
 │   ├── index_customer.html
 │   └── index_internal.html
-│
 ├── .env
 ├── .gitignore
 ├── app.py
