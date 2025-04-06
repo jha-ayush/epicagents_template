@@ -50,11 +50,9 @@ For small businesses, it's hard to:
 
 ```
 epicagents/
-│
 ├── assets/
 │   ├── epic_agents_logo.png
 │   ├── navo_logo_01.jpg
-│
 ├── data/
 │   ├── customer_docs/
 │   │   ├── menu.json
@@ -68,7 +66,6 @@ epicagents/
 │       ├── inventory_management.json
 │       ├── marketing_plan.json
 │       └── standard_operating_procedures.json
-│
 ├── templates/
 │   ├── index_customer.html
 │   └── index_internal.html
@@ -79,7 +76,6 @@ epicagents/
 ├── README.md
 └── requirements.txt
 ```
-
 ---
 
 ## 🚀 Running Locally
