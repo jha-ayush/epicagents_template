@@ -54,7 +54,6 @@ epicagents/
 ├── assets/
 │   ├── epic_agents_logo.png
 │   ├── navo_logo_01.jpg
-│   └── navo_logo_01_transparent.jpg
 │
 ├── data/
 │   ├── customer_docs/
