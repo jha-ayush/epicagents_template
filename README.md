@@ -6,7 +6,7 @@
 
 **Create, Customize & Deploy AI Chat Agents for Any Business Use Case**
 
-EpicAgents is a modular, production-ready framework that powers branded AI assistants like **Navo** — tailored to answer business-specific customer or internal queries using structured data, with zero coding required for customization.
+EpicAgents is a modular, production-ready framework that powers branded AI assistants like **Navo** <img src="https://i.imghippo.com/files/Vq5956YiM.png" alt="Navo Logo" width="50"/> — tailored to answer business-specific customer or internal queries using structured data, with zero coding required for customization.
 
 ---
 ### 🔗 [Visit epicagents.ai](https://epicagents.ai)  
